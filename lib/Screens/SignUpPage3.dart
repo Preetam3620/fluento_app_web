@@ -4,8 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:sizer/sizer.dart';
-
-//import '../home_page.dart';
+import 'HomePage.dart';
 
 class SignUpPage3 extends StatefulWidget {
   // SignUpPage3({required Key key}) : super(key: key);
@@ -212,7 +211,7 @@ class _SignUpPage3State extends State<SignUpPage3> with TickerProviderStateMixin
                         emailID: user['email'],
                         password: textController1.text,
                       );
-                      //Navigator.pushNamed(context, HomePage.routeName);
+                      Navigator.pushNamed(context, HomePage.routeName);
                     },
                     child: Hero(
                       tag: 'but',

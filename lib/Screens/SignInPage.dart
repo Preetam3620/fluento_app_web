@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sizer/sizer.dart';
-
+import 'HomePage.dart';
 //import '../home_page.dart';
 
 class SignInPage extends StatefulWidget {
@@ -238,9 +238,9 @@ class _SignInPageState extends State<SignInPage> {
                                 final email = textController1.text;
                                 final password = textController2.text;
                                 final String message = await signIn(emailID: email, password: password);
-                                //final User user = _auth.currentUser!;
+                                final User user = _auth.currentUser!;
                                 if (message[0] == 'L') {
-                                  //Navigator.pushNamed(context, HomePage.routeName);
+                                  Navigator.pushNamed(context, HomePage.routeName);
                                 } else if (message[0] == 'N') {
                                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
                                 } else if (message[0] == 'W') {

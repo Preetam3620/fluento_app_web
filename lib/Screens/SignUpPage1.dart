@@ -1,6 +1,5 @@
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:fluento_app_web/Screens/SignUpPage2.dart';
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_svg/flutter_svg.dart';
