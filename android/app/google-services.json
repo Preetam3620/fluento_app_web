@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "663551928605",
+    "project_id": "fluento-app",
+    "storage_bucket": "fluento-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663551928605:android:391e16c77c3549239bd9f4",
+        "android_client_info": {
+          "package_name": "com.cyphertech.fluento_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663551928605-kkb47ftnqdcv2pesenf69p8k1p8c1tgf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUOuAxhcHnpEODpya8f8TDlizbqPyS1is"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663551928605-kkb47ftnqdcv2pesenf69p8k1p8c1tgf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663551928605:android:48b9f610cdf451bc9bd9f4",
+        "android_client_info": {
+          "package_name": "com.example.fluento_app_web"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663551928605-kkb47ftnqdcv2pesenf69p8k1p8c1tgf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUOuAxhcHnpEODpya8f8TDlizbqPyS1is"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663551928605-kkb47ftnqdcv2pesenf69p8k1p8c1tgf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

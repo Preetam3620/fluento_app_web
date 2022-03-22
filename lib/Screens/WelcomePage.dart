@@ -1,3 +1,5 @@
+import 'package:fluento_app_web/Screens/SignInPage.dart';
+import 'package:fluento_app_web/Screens/SignUpPage1.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
@@ -70,7 +72,7 @@ class _WelcomePageState extends State<WelcomePage> {
             Expanded(
               flex: 3,
               child: GestureDetector(
-                // onTap: () => Navigator.pushNamed(context, SignUpPage1.routeName),
+                onTap: () => Navigator.pushNamed(context, SignUpPage1.routeName),
                 child: Container(
                   width: 100,
                   height: 100,
@@ -112,7 +114,7 @@ class _WelcomePageState extends State<WelcomePage> {
             Expanded(
               flex: 3,
               child: GestureDetector(
-                // onTap: () => Navigator.pushNamed(context, SignInPage.routeName),
+                onTap: () => Navigator.pushNamed(context, SignInPage.routeName),
                 child: Container(
                   width: 100,
                   height: 100,

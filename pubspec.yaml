@@ -1,13 +1,12 @@
 name: fluento_app_web
 description: A new Flutter project.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
 environment:
   sdk: ">=2.16.1 <3.0.0"
-
 
 dependencies:
   flutter:
@@ -16,17 +15,21 @@ dependencies:
   cupertino_icons: ^1.0.2
   sizer: ^2.0.15
   auto_size_text: ^3.0.0
-
-
+  firebase_auth: ^3.3.11
+  flutter_svg: ^1.0.3
+  google_fonts: ^2.3.1
+  firebase_core: ^1.13.1
+  cloud_firestore: ^3.1.10
+  firebase_storage: ^10.2.9
+  auto_size_text_pk: ^3.0.0
+  font_awesome_flutter: ^10.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-
 #  flutter_lints: ^1.0.0
 flutter:
-
   uses-material-design: true
 
   assets:
@@ -38,7 +41,6 @@ flutter:
     - assets/beginnerImages/colors/
     - assets/beginnerImages/family/
     - assets/beginnerImages/greetings/
-
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
