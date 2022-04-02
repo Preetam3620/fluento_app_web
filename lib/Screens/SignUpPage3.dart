@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, unused_field, must_call_super
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';

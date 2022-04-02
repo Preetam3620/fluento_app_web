@@ -2,13 +2,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 // import 'package:fluento_app/Screens/friends/friends_page.dart';
 // import 'package:fluento_app/Screens/leaderboard.dart';
 // import 'package:fluento_app/Screens/requestpage.dart';
-// import 'package:fluento_app/Screens/select_language_card.dart';
+import 'package:fluento_app_web/Utility/LanguageSelectionCard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+// ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
 // import 'Language-Page/language_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                         height: 30.h,
                         child: GestureDetector(
                           onTap: () {
-                            //Navigator.pushNamed(context, LanguagePage.routeName, arguments: profile['languages'].keys.elementAt(index));
+                            Navigator.pushNamed(context, LanguagePage.routeName, arguments: profile['languages'].keys.elementAt(index));
                           },
                           child: Card(
                             clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -221,7 +221,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton.extended(
         heroTag: 'botbut',
         onPressed: () {
-          //Navigator.pushNamed(context, SelectLanguageCard.routeName);
+          Navigator.pushNamed(context, SelectLanguageCard.routeName);
         },
         backgroundColor: const Color(0xFF6C63FF),
         icon: const Icon(

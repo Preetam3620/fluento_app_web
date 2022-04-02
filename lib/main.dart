@@ -7,6 +7,8 @@ import 'Screens/SignUpPage1.dart';
 import 'Screens/SignUpPage2.dart';
 import 'Screens/SignUpPage3.dart';
 import 'Screens/HomePage.dart';
+import 'Utility/LanguageSelectionCard.dart';
+import 'Screens/LanguagePage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,6 +33,8 @@ class MyApp extends StatelessWidget {
             SignUpPage2.routeName: (context) => const SignUpPage2(),
             SignUpPage3.routeName: (context) => const SignUpPage3(),
             HomePage.routeName: (context) => HomePage(),
+            SelectLanguageCard.routeName: (context) => SelectLanguageCard(),
+            LanguagePage.routeName: (context) => LanguagePage(),
           },
           initialRoute: WelcomePage.routeName,
         );
