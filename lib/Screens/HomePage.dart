@@ -9,6 +9,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+
+import 'LanguagePage.dart';
 // import 'Language-Page/language_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,8 +23,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
-  final Stream<DocumentSnapshot<Map<String, dynamic>>> _profileInfo =
-      FirebaseFirestore.instance.collection('profiles').doc(FirebaseAuth.instance.currentUser!.uid).snapshots();
+  final Stream<DocumentSnapshot<Map<String, dynamic>>> _profileInfo = FirebaseFirestore.instance.collection('profiles').doc(FirebaseAuth.instance.currentUser!.uid).snapshots();
   @override
   void initState() {
     super.initState();
@@ -79,7 +80,7 @@ class _HomePageState extends State<HomePage> {
           } else {
             Map<String, dynamic> profile = snapshot.data!.data() as Map<String, dynamic>;
 
-            return (profile['languages'].length != 0) //(profile['languages'].length != 0)
+            return (profile['languages'].length != 0)
                 ? ListView.builder(
                     shrinkWrap: true,
                     itemCount: profile['languages'].length, //profile['languages'].length,
@@ -219,7 +220,7 @@ class _HomePageState extends State<HomePage> {
         },
       ),
       floatingActionButton: FloatingActionButton.extended(
-        heroTag: 'botbut',
+        heroTag: 'addLang',
         onPressed: () {
           Navigator.pushNamed(context, SelectLanguageCard.routeName);
         },

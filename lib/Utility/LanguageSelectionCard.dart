@@ -21,7 +21,7 @@ class _SelectLanguageCardState extends State<SelectLanguageCard> {
       backgroundColor: const Color(0xFF1A1A2F),
       body: SafeArea(
         child: Hero(
-          tag: 'botbut',
+          tag: 'addLang',
           child: Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 1,
@@ -41,6 +41,7 @@ class _SelectLanguageCardState extends State<SelectLanguageCard> {
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
+                    // select language
                     Expanded(
                       child: Container(
                         width: 100,
@@ -82,6 +83,7 @@ class _SelectLanguageCardState extends State<SelectLanguageCard> {
                         ),
                       ),
                     ),
+                    // hindi
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
@@ -142,6 +144,7 @@ class _SelectLanguageCardState extends State<SelectLanguageCard> {
                         ),
                       ),
                     ),
+                    // english
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
@@ -206,6 +209,7 @@ class _SelectLanguageCardState extends State<SelectLanguageCard> {
                         ),
                       ),
                     ),
+                    // spanish
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
@@ -270,6 +274,7 @@ class _SelectLanguageCardState extends State<SelectLanguageCard> {
                         ),
                       ),
                     ),
+                    // french
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
@@ -334,8 +339,7 @@ class _SelectLanguageCardState extends State<SelectLanguageCard> {
                         ),
                       ),
                     ),
-
-                    // German
+                    // german
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
