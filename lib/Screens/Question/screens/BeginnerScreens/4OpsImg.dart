@@ -1,3 +1,5 @@
+import 'package:fluento_app_web/Screens/CongratulationPage.dart';
+
 import '/Screens/LanguagePage.dart';
 import '/Screens/Question/quiz_handler.dart';
 import 'package:flutter/material.dart';
@@ -321,7 +323,14 @@ class _FOpsImageState extends State<FOpsImage> {
                           print(score);
                         }
                         await updateScrore(score: score, langName: widget.langName, title: widget.quizNo, level: widget.level);
-                        Navigator.pushReplacementNamed(context, LanguagePage.routeName, arguments: widget.langName);
+                        //Navigator.pushReplacementNamed(context, LanguagePage.routeName, arguments: widget.langName);
+                        final Map<String, dynamic> info = {
+                          'title': widget.title,
+                          'score': score,
+                          'langName': widget.langName,
+                          'length': widget.quesNo
+                        };
+                        Navigator.pushReplacementNamed(context, CongratulationPage.routeName, arguments: info);
                         score = 0;
                         currentPage = 0;
                       } else {
@@ -370,6 +379,9 @@ class _FOpsImageState extends State<FOpsImage> {
 Future<void> updateScrore({required score, required langName, required title, required level}) async {
   final uid = FirebaseAuth.instance.currentUser!.uid;
   DocumentReference userDocRef = FirebaseFirestore.instance.collection('profiles').doc(uid);
-  await userDocRef.update({'languages.$langName.$level.$title': score}).then((value) => print("Query Done")).catchError((error) => print("Failed to query: $error"));
+  await userDocRef
+      .update({'languages.$langName.$level.$title': score})
+      .then((value) => print("Query Done"))
+      .catchError((error) => print("Failed to query: $error"));
   ;
 }
