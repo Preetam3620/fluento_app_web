@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:fluento_app_web/Screens/LeaderBoard.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'screens/WelcomePage.dart';
@@ -9,6 +10,10 @@ import 'Screens/SignUpPage3.dart';
 import 'Screens/HomePage.dart';
 import 'Utility/LanguageSelectionCard.dart';
 import 'Screens/LanguagePage.dart';
+import 'Screens/FriendsPage.dart';
+import 'Screens/AddFriends.dart';
+import 'Screens/ProfilePage.dart';
+import 'Screens/RequestPage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,6 +40,11 @@ class MyApp extends StatelessWidget {
             HomePage.routeName: (context) => HomePage(),
             SelectLanguageCard.routeName: (context) => SelectLanguageCard(),
             LanguagePage.routeName: (context) => LanguagePage(),
+            leaderBoard.routeName: (context) => leaderBoard(),
+            FriendsPage.routeName: (context) => FriendsPage(),
+            addFriendsCard.routeName: (context) => addFriendsCard(),
+            ProfilePage.routeName: (context) => ProfilePage(),
+            requestPage.routeName: (context) => requestPage(),
           },
           initialRoute: WelcomePage.routeName,
         );

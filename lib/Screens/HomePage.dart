@@ -1,4 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fluento_app_web/Screens/FriendsPage.dart';
+import 'package:fluento_app_web/Screens/LeaderBoard.dart';
+import 'package:fluento_app_web/Screens/ProfilePage.dart';
+import 'package:fluento_app_web/Screens/RequestPage.dart';
 // import 'package:fluento_app/Screens/friends/friends_page.dart';
 // import 'package:fluento_app/Screens/leaderboard.dart';
 // import 'package:fluento_app/Screens/requestpage.dart';
@@ -23,7 +27,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
-  final Stream<DocumentSnapshot<Map<String, dynamic>>> _profileInfo = FirebaseFirestore.instance.collection('profiles').doc(FirebaseAuth.instance.currentUser!.uid).snapshots();
+  final Stream<DocumentSnapshot<Map<String, dynamic>>> _profileInfo =
+      FirebaseFirestore.instance.collection('profiles').doc(FirebaseAuth.instance.currentUser!.uid).snapshots();
   @override
   void initState() {
     super.initState();
@@ -283,20 +288,23 @@ class _HomePageState extends State<HomePage> {
                   thickness: 3,
                   color: Colors.white,
                 ),
-                const Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
-                  child: Text(
-                    'Profile',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.white,
-                      fontSize: 26,
-                      fontWeight: FontWeight.w500,
+                GestureDetector(
+                  onTap: () => Navigator.pushNamed(context, ProfilePage.routeName),
+                  child: const Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
+                    child: Text(
+                      'Profile',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        color: Colors.white,
+                        fontSize: 26,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ),
                 ),
                 GestureDetector(
-                  //onTap: () => Navigator.pushNamed(context, FriendsPage.routeName),
+                  onTap: () => Navigator.pushNamed(context, FriendsPage.routeName),
                   child: const Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
                     child: Text(
@@ -311,7 +319,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 GestureDetector(
-                  //onTap: () => Navigator.pushNamed(context, requestPage.routeName),
+                  onTap: () => Navigator.pushNamed(context, requestPage.routeName),
                   child: const Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
                     child: Text(
@@ -338,7 +346,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 GestureDetector(
-                  //onTap: () => Navigator.pushNamed(context, leaderBoard.routeName),
+                  onTap: () => Navigator.pushNamed(context, leaderBoard.routeName),
                   child: const Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
                     child: Text(
