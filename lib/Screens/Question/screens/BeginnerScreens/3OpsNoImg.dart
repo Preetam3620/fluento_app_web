@@ -1,3 +1,5 @@
+import 'package:fluento_app_web/Screens/CongratulationPage.dart';
+
 import '/Screens/LanguagePage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -287,7 +289,14 @@ class _TOpsNoImageState extends State<TOpsNoImage> {
                           print(score);
                         }
                         await updateScrore(score: score, langName: widget.langName, title: widget.quizNo, level: widget.level);
-                        Navigator.pushReplacementNamed(context, LanguagePage.routeName, arguments: widget.langName);
+                        //Navigator.pushReplacementNamed(context, LanguagePage.routeName, arguments: widget.langName);
+                        final Map<String, dynamic> info = {
+                          'title': widget.title,
+                          'score': score,
+                          'langName': widget.langName,
+                          'length': widget.quesNo
+                        };
+                        Navigator.pushReplacementNamed(context, CongratulationPage.routeName, arguments: info);
                         score = 0;
                         currentPage = 0;
                       } else {

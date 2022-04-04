@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fluento_app_web/Screens/CongratulationPage.dart';
 import '/Screens/Question/models/english_que.dart';
 import '/Screens/Question/models/hindi_que.dart';
 import '/Screens/Question/models/spanish_que.dart';

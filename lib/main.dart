@@ -19,6 +19,7 @@ import 'Screens/Question/screens/BeginnerScreens/3OpsImg.dart';
 import 'Screens/Question/screens/BeginnerScreens/3OpsNoImg.dart';
 import 'Screens/Question/screens/BeginnerScreens/4OpsImg.dart';
 import 'Screens/Question/screens/BeginnerScreens/4OpsNoImg.dart';
+import 'Screens/CongratulationPage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
             addFriendsCard.routeName: (context) => addFriendsCard(),
             ProfilePage.routeName: (context) => ProfilePage(),
             requestPage.routeName: (context) => requestPage(),
+            CongratulationPage.routeName: (context) => CongratulationPage(),
             TOpsImg.routeName: (context) => TOpsImg(
                   answer: '',
                   optionD: '',
