@@ -285,6 +285,7 @@ Future<void> signUp({required username, required emailID, required password}) as
         'email': emailID,
         'languages': [],
         'profileImageURL': 'https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png',
+        'exp': 0,
       })
       .then((value) => print("User Added"))
       .catchError((error) => print("Failed to add user: $error"));
