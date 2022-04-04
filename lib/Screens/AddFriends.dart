@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class addFriendsCard extends StatelessWidget {
-  static const routeName = '/addFriendscard';
+  static const routeName = '/addFriendsCard';
 
   get textController => null;
   var _uid;
@@ -29,7 +29,7 @@ class addFriendsCard extends StatelessWidget {
       color: Color(0xFF1A1A2F),
       padding: const EdgeInsets.fromLTRB(20, 220, 20, 220),
       child: Hero(
-        tag: 'frndtag',
+        tag: 'addFriend',
         child: Card(
           clipBehavior: Clip.antiAliasWithSaveLayer,
           color: Color(0xFF262647),

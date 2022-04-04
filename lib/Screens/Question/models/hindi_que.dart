@@ -54,7 +54,7 @@ List<McqQuestion> HindiTutNumber = [
       optionB: 'सैंतीस',
       optionC: 'पचपन ',
       optionD: 'पैंतालीस',
-      answer: 'पैंतालीस'),
+      answer: 'पचपन'),
   McqQuestion(
       questionType: '4MI',
       questionText: 'Identify the given number.',
@@ -84,24 +84,8 @@ List<McqQuestion> HindiQuizNumber = [
       optionC: 'दो',
       optionD: 'तीन',
       answer: 'दो'),
-  McqQuestion(
-      questionType: '4MNI',
-      questionText: 'What is Seven called in Hindi?',
-      imageString: '',
-      optionA: 'आठ',
-      optionB: 'सात',
-      optionC: 'छह',
-      optionD: 'पांच',
-      answer: 'सात'),
-  McqQuestion(
-      questionType: '4MNI',
-      questionText: 'Which number comes before Five?',
-      imageString: '',
-      optionA: 'तीन',
-      optionB: 'एक',
-      optionC: 'छह',
-      optionD: 'चार',
-      answer: 'चार'),
+  McqQuestion(questionType: '4MNI', questionText: 'What is Seven called in Hindi?', imageString: '', optionA: 'आठ', optionB: 'सात', optionC: 'छह', optionD: 'पांच', answer: 'सात'),
+  McqQuestion(questionType: '4MNI', questionText: 'Which number comes before Five?', imageString: '', optionA: 'तीन', optionB: 'एक', optionC: 'छह', optionD: 'चार', answer: 'चार'),
   McqQuestion(
       questionType: '4MI',
       questionText: 'Correctly identify the given number.',
@@ -112,14 +96,7 @@ List<McqQuestion> HindiQuizNumber = [
       optionD: 'शून्य',
       answer: 'पांच'),
   McqQuestion(
-      questionType: '4MNI',
-      questionText: 'What is Eighty Three called in Hindi?',
-      imageString: '',
-      optionA: 'पैंतालीस',
-      optionB: 'चौरासी',
-      optionC: 'तिरासी',
-      optionD: 'अड़तालीस',
-      answer: 'तिरासी'),
+      questionType: '4MNI', questionText: 'What is Eighty Three called in Hindi?', imageString: '', optionA: 'पैंतालीस', optionB: 'चौरासी', optionC: 'तिरासी', optionD: 'अड़तालीस', answer: 'तिरासी'),
   McqQuestion(
       questionType: '4MI',
       questionText: 'Identify the given number.',
@@ -129,15 +106,7 @@ List<McqQuestion> HindiQuizNumber = [
       optionC: 'सत्ताईस',
       optionD: 'पैंतालीस',
       answer: 'सत्ताईस'),
-  McqQuestion(
-      questionType: '4MNI',
-      questionText: 'Which number is greater than Eight?',
-      imageString: '',
-      optionA: 'दो',
-      optionB: 'पांच',
-      optionC: 'नौ',
-      optionD: 'सात',
-      answer: 'नौ'),
+  McqQuestion(questionType: '4MNI', questionText: 'Which number is greater than Eight?', imageString: '', optionA: 'दो', optionB: 'पांच', optionC: 'नौ', optionD: 'सात', answer: 'नौ'),
   McqQuestion(
       questionType: '4MI',
       questionText: 'Which bird is this?',
@@ -185,7 +154,7 @@ List<McqQuestion> HindiTutAnimals = [
       optionB: 'व्हेल',
       optionC: 'बाघ',
       optionD: 'तोता',
-      answer: 'तोता'),
+      answer: 'बाघ'),
   McqQuestion(
       questionType: '4MI',
       questionText: 'Which animal is this?',
@@ -203,7 +172,7 @@ List<McqQuestion> HindiTutAnimals = [
       optionB: 'तेंदुआ',
       optionC: 'बाघ',
       optionD: 'बिल्ली',
-      answer: 'बिल्ली'),
+      answer: 'मगरमच्छ'),
   McqQuestion(
       questionType: '4MI',
       questionText: 'Which animal is this?',
@@ -242,42 +211,11 @@ List<McqQuestion> HindiQuizAnimals = [
       optionC: 'बिल्ली',
       optionD: 'हाथी',
       answer: 'हाथी'),
+  McqQuestion(questionType: '4MNI', questionText: 'Which animal lays eggs?', imageString: '', optionA: 'मगरमच्छ', optionB: 'बाघ', optionC: 'सिंह', optionD: 'हाथी', answer: 'मगरमच्छ'),
+  McqQuestion(questionType: '4MNI', questionText: 'Hindi name of the Leopard ', imageString: '', optionA: 'तेंदुआ', optionB: 'झींगे', optionC: 'बिल्ली', optionD: 'व्हेल', answer: 'तेंदुआ'),
+  McqQuestion(questionType: '4MNI', questionText: 'Odd one out:', imageString: '', optionA: 'तेंदुआ', optionB: 'व्हेल', optionC: 'बाघ', optionD: 'कुत्ता', answer: 'व्हेल'),
   McqQuestion(
-      questionType: '4MNI',
-      questionText: 'Which animal lays eggs?',
-      imageString: '',
-      optionA: 'मगरमच्छ',
-      optionB: 'बाघ',
-      optionC: 'सिंह',
-      optionD: 'हाथी',
-      answer: 'मगरमच्छ'),
-  McqQuestion(
-      questionType: '4MNI',
-      questionText: 'Hindi name of the Leopard ',
-      imageString: '',
-      optionA: 'तेंदुआ',
-      optionB: 'झींगे',
-      optionC: 'बिल्ली',
-      optionD: 'व्हेल',
-      answer: 'तेंदुआ'),
-  McqQuestion(
-      questionType: '4MNI',
-      questionText: 'Odd one out:',
-      imageString: '',
-      optionA: 'तेंदुआ',
-      optionB: 'व्हेल',
-      optionC: 'बाघ',
-      optionD: 'कुत्ता',
-      answer: 'व्हेल'),
-  McqQuestion(
-      questionType: '4MNI',
-      questionText: 'Which of the following will be good pet?',
-      imageString: '',
-      optionA: 'सिंह',
-      optionB: 'तेंदुआ',
-      optionC: 'व्हेल',
-      optionD: 'कुत्ता',
-      answer: 'कुत्ता'),
+      questionType: '4MNI', questionText: 'Which of the following will be good pet?', imageString: '', optionA: 'सिंह', optionB: 'तेंदुआ', optionC: 'व्हेल', optionD: 'कुत्ता', answer: 'कुत्ता'),
 ];
 
 List<McqQuestion> HindiTutGreetings = [
@@ -292,8 +230,7 @@ List<McqQuestion> HindiTutGreetings = [
       answer: 'आप से मिलकर अच्छा लगा'),
   McqQuestion(
       questionType: '3MNI',
-      questionText:
-          'If you leaving someone at night, you can greet them by saying',
+      questionText: 'If you leaving someone at night, you can greet them by saying',
       imageString: '',
       optionA: 'शुभ रात्रि',
       optionB: 'शुभ प्रभात',
@@ -301,14 +238,7 @@ List<McqQuestion> HindiTutGreetings = [
       optionD: '',
       answer: 'शुभ रात्रि'),
   McqQuestion(
-      questionType: '3MNI',
-      questionText: 'Synonymous of goodbye',
-      imageString: '',
-      optionA: 'See you later',
-      optionB: 'Goodbye',
-      optionC: 'Nice to meet you',
-      optionD: '',
-      answer: 'See you later'),
+      questionType: '3MNI', questionText: 'Synonymous of goodbye', imageString: '', optionA: 'See you later', optionB: 'Goodbye', optionC: 'Nice to meet you', optionD: '', answer: 'See you later'),
   McqQuestion(
       questionType: '4MI',
       questionText: 'Which one is greeting?',
@@ -348,14 +278,7 @@ List<McqQuestion> HindiQuizGreetings = [
       optionD: 'बधाई हो',
       answer: 'मैं अच्छा हूँ'),
   McqQuestion(
-      questionType: '4MNI',
-      questionText: 'How do we apologize?',
-      imageString: '',
-      optionA: 'शुक्रिया',
-      optionB: 'मुझे क्षमा करें',
-      optionC: 'हां ',
-      optionD: 'स्वागत',
-      answer: 'मुझे क्षमा करें'),
+      questionType: '4MNI', questionText: 'How do we apologize?', imageString: '', optionA: 'शुक्रिया', optionB: 'मुझे क्षमा करें', optionC: 'हां ', optionD: 'स्वागत', answer: 'मुझे क्षमा करें'),
   McqQuestion(
       questionType: '4MI',
       questionText: 'What are they doing?',
@@ -367,8 +290,7 @@ List<McqQuestion> HindiQuizGreetings = [
       answer: 'शुभकामना'),
   McqQuestion(
       questionType: '4MNI',
-      questionText:
-          '5.	Specify the greetings in respective orders:Night, Noon, Morning',
+      questionText: '5.	Specify the greetings in respective orders:Night, Noon, Morning',
       imageString: '',
       optionA: 'शुभ प्रभात, नमस्कार, शुभ रात्रि',
       optionB: 'नमस्कार, शुभ प्रभात, शुभ रात्रि',
@@ -378,15 +300,7 @@ List<McqQuestion> HindiQuizGreetings = [
 ];
 
 List<McqQuestion> HindiTutFamily = [
-  McqQuestion(
-      questionType: '4MNI',
-      questionText: 'Father,mother, sister are my',
-      imageString: '',
-      optionA: 'माता - पिता',
-      optionB: 'बच्चे',
-      optionC: 'परिवार',
-      optionD: 'दादा दादी',
-      answer: 'परिवार'),
+  McqQuestion(questionType: '4MNI', questionText: 'Father,mother, sister are my', imageString: '', optionA: 'माता - पिता', optionB: 'बच्चे', optionC: 'परिवार', optionD: 'दादा दादी', answer: 'परिवार'),
   McqQuestion(
       questionType: '4MNI',
       questionText: 'I have a father and mother. They are my',
@@ -405,15 +319,7 @@ List<McqQuestion> HindiTutFamily = [
       optionC: 'दादी मा',
       optionD: 'दादा',
       answer: 'दादी मा'),
-  McqQuestion(
-      questionType: '4MNI',
-      questionText: 'She, my …., is old',
-      imageString: '',
-      optionA: 'बेटा',
-      optionB: 'दादा',
-      optionC: 'दादी मा',
-      optionD: 'दादा दादी',
-      answer: 'दादी मा'),
+  McqQuestion(questionType: '4MNI', questionText: 'She, my …., is old', imageString: '', optionA: 'बेटा', optionB: 'दादा', optionC: 'दादी मा', optionD: 'दादा दादी', answer: 'दादी मा'),
   McqQuestion(
       questionType: '4MI',
       questionText: 'Fatur is Fikri’s…',
@@ -424,14 +330,7 @@ List<McqQuestion> HindiTutFamily = [
       optionD: 'भतीजा',
       answer: 'भतीजा'),
   McqQuestion(
-      questionType: '4MI',
-      questionText: 'Seli is Fatur’s…',
-      imageString: 'assets/beginnerImages/family/t6.png',
-      optionA: 'भाई',
-      optionB: 'पिता जी',
-      optionC: 'बहन',
-      optionD: 'भांजी',
-      answer: 'बहन'),
+      questionType: '4MI', questionText: 'Seli is Fatur’s…', imageString: 'assets/beginnerImages/family/t6.png', optionA: 'भाई', optionB: 'पिता जी', optionC: 'बहन', optionD: 'भांजी', answer: 'बहन'),
   McqQuestion(
       questionType: '4MI',
       questionText: 'Mr. Fikri is Fatur’s…',
@@ -463,23 +362,14 @@ List<McqQuestion> HindiTutFamily = [
 List<McqQuestion> HindiQuizFamily = [
   McqQuestion(
       questionType: '4MNI',
-      questionText:
-          'What is my relation to Seema, if Seema is Daughter of my father?',
+      questionText: 'What is my relation to Seema, if Seema is Daughter of my father?',
       optionA: 'बहन',
       optionB: 'बीवी',
       optionC: 'पति',
       optionD: 'बेटी',
       answer: 'बहन',
       imageString: ''),
-  McqQuestion(
-      questionType: '4MNI',
-      questionText: '2.	What is your relation to your uncle’s wife?',
-      optionA: 'चाची',
-      optionB: 'बहन',
-      optionC: 'मां',
-      optionD: 'बेटी',
-      imageString: '',
-      answer: 'चाची'),
+  McqQuestion(questionType: '4MNI', questionText: '2.	What is your relation to your uncle’s wife?', optionA: 'चाची', optionB: 'बहन', optionC: 'मां', optionD: 'बेटी', imageString: '', answer: 'चाची'),
   McqQuestion(
       questionType: '4MI',
       questionText: '3.	Who is this man to the small kid in the image?',
@@ -491,8 +381,7 @@ List<McqQuestion> HindiQuizFamily = [
       answer: 'बेटी'),
   McqQuestion(
       questionType: '4MNI',
-      questionText:
-          '4.	My Mutter’s husband have a sister, What is her relation to me?',
+      questionText: '4.	My Mutter’s husband have a sister, What is her relation to me?',
       optionA: 'भतीजा',
       optionB: 'Sohn',
       imageString: '',
@@ -503,41 +392,13 @@ List<McqQuestion> HindiQuizFamily = [
 
 List<McqQuestion> HindiTutColour = [
   McqQuestion(
-      questionType: '4MI',
-      questionText: 'Which colour is this?',
-      imageString: 'assets/beginnerImages/colors/t1.png',
-      optionA: 'लाल',
-      optionB: 'हरा',
-      optionC: 'नीला',
-      optionD: 'पीला',
-      answer: 'नीला'),
+      questionType: '4MI', questionText: 'Which colour is this?', imageString: 'assets/beginnerImages/colors/t1.png', optionA: 'लाल', optionB: 'हरा', optionC: 'नीला', optionD: 'पीला', answer: 'नीला'),
   McqQuestion(
-      questionType: '4MI',
-      questionText: 'Which colour is this?',
-      imageString: 'assets/beginnerImages/colors/t2.png',
-      optionA: 'लाल',
-      optionB: 'हरा',
-      optionC: 'नीला',
-      optionD: 'पीला',
-      answer: 'लाल'),
+      questionType: '4MI', questionText: 'Which colour is this?', imageString: 'assets/beginnerImages/colors/t2.png', optionA: 'लाल', optionB: 'हरा', optionC: 'नीला', optionD: 'पीला', answer: 'लाल'),
   McqQuestion(
-      questionType: '4MI',
-      questionText: 'Which colour is this?',
-      imageString: 'assets/beginnerImages/colors/t3.png',
-      optionA: 'लाल',
-      optionB: 'हरा',
-      optionC: 'नीला',
-      optionD: 'पीला',
-      answer: 'हरा'),
+      questionType: '4MI', questionText: 'Which colour is this?', imageString: 'assets/beginnerImages/colors/t3.png', optionA: 'लाल', optionB: 'हरा', optionC: 'नीला', optionD: 'पीला', answer: 'हरा'),
   McqQuestion(
-      questionType: '4MI',
-      questionText: 'Which colour is this?',
-      imageString: 'assets/beginnerImages/colors/t4.png',
-      optionA: 'लाल',
-      optionB: 'हरा',
-      optionC: 'नीला',
-      optionD: 'पीला',
-      answer: 'पीला'),
+      questionType: '4MI', questionText: 'Which colour is this?', imageString: 'assets/beginnerImages/colors/t4.png', optionA: 'लाल', optionB: 'हरा', optionC: 'नीला', optionD: 'पीला', answer: 'पीला'),
   McqQuestion(
       questionType: '4MI',
       questionText: 'Which colour is this?',

@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '/Screens/Question/models/english_que.dart';
 import '/Screens/Question/models/hindi_que.dart';
+import '/Screens/Question/models/spanish_que.dart';
 import '/Screens/Question/quiz_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -88,6 +89,7 @@ class _LanguagePageState extends State<LanguagePage> {
                       height: 2.h,
                     ),
                     Divider(color: Colors.white),
+                    // beginner
                     ExpansionTile(
                       iconColor: Colors.white,
                       collapsedIconColor: Colors.white,
@@ -113,7 +115,7 @@ class _LanguagePageState extends State<LanguagePage> {
                                 quizl = EnglishTutNumber;
                                 break;
                               case 'Spanish':
-                                quizl = HindiTutNumber;
+                                quizl = SpanishTutNumber;
                                 break;
                               case 'German':
                                 quizl = HindiTutNumber;
@@ -124,7 +126,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Module 1: Numbers', 'quizNo': 'Tutorial1', 'score': profile['languages'][langName]['beginner']['Tutorial1'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Module 1: Numbers',
+                              'quizNo': 'Tutorial1',
+                              'score': profile['languages'][langName]['beginner']['Tutorial1'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -149,7 +158,7 @@ class _LanguagePageState extends State<LanguagePage> {
                                 quizl = EnglishQuizNumber;
                                 break;
                               case 'Spanish':
-                                quizl = HindiQuizNumber;
+                                quizl = SpanishQuizNumber;
                                 break;
                               case 'German':
                                 quizl = HindiQuizNumber;
@@ -160,7 +169,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 1: Numbers', 'quizNo': 'Quiz1', 'score': profile['languages'][langName]['beginner']['Quiz1'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 1: Numbers',
+                              'quizNo': 'Quiz1',
+                              'score': profile['languages'][langName]['beginner']['Quiz1'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -187,7 +203,7 @@ class _LanguagePageState extends State<LanguagePage> {
                                 quizl = EnglishTutAnimals;
                                 break;
                               case 'Spanish':
-                                quizl = HindiTutNumber;
+                                quizl = SpanishTutAnimals;
                                 break;
                               case 'German':
                                 quizl = HindiTutNumber;
@@ -198,7 +214,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Module 2: Animals', 'quizNo': 'Tutorial2', 'score': profile['languages'][langName]['beginner']['Tutorial2'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Module 2: Animals',
+                              'quizNo': 'Tutorial2',
+                              'score': profile['languages'][langName]['beginner']['Tutorial2'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -210,7 +233,8 @@ class _LanguagePageState extends State<LanguagePage> {
                               ],
                             ),
                           ),
-                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial2'].toString().toString(), style: k20TextStyle), //TODO:ADD score
+                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial2'].toString().toString(),
+                              style: k20TextStyle), //TODO:ADD score
                         ),
                         ListTile(
                           onTap: () {
@@ -223,7 +247,7 @@ class _LanguagePageState extends State<LanguagePage> {
                                 quizl = EnglishQuizAnimals;
                                 break;
                               case 'Spanish':
-                                quizl = HindiQuizAnimals;
+                                quizl = SpanishQuizAnimals;
                                 break;
                               case 'German':
                                 quizl = HindiQuizAnimals;
@@ -234,7 +258,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 2: Animals', 'quizNo': 'Quiz2', 'score': profile['languages'][langName]['beginner']['Quiz2'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 2: Animals',
+                              'quizNo': 'Quiz2',
+                              'score': profile['languages'][langName]['beginner']['Quiz2'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -261,7 +292,7 @@ class _LanguagePageState extends State<LanguagePage> {
                                 quizl = EnglishTutColors;
                                 break;
                               case 'Spanish':
-                                quizl = HindiTutColour;
+                                quizl = SpanishTutColour;
                                 break;
                               case 'German':
                                 quizl = HindiTutColour;
@@ -272,7 +303,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Module 3: Colors', 'quizNo': 'Tutorial3', 'score': profile['languages'][langName]['beginner']['Tutorial3'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Module 3: Colors',
+                              'quizNo': 'Tutorial3',
+                              'score': profile['languages'][langName]['beginner']['Tutorial3'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -284,20 +322,21 @@ class _LanguagePageState extends State<LanguagePage> {
                               ],
                             ),
                           ),
-                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial3'].toString().toString(), style: k20TextStyle), //TODO:ADD score
+                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial3'].toString().toString(),
+                              style: k20TextStyle), //TODO:ADD score
                         ),
                         ListTile(
                           onTap: () {
                             var quizl;
                             switch (langName) {
                               case 'Hindi':
-                                quizl = HindiTutColour;
+                                quizl = HindiQuizColor;
                                 break;
                               case 'English':
                                 quizl = EnglishQuizColors;
                                 break;
                               case 'Spanish':
-                                quizl = HindiQuizAnimals;
+                                quizl = SpanishQuizColor;
                                 break;
                               case 'German':
                                 quizl = HindiQuizAnimals;
@@ -308,7 +347,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 3: Colors', 'quizNo': 'Quiz3', 'score': profile['languages'][langName]['beginner']['Quiz3'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 3: Colors',
+                              'quizNo': 'Quiz3',
+                              'score': profile['languages'][langName]['beginner']['Quiz3'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -335,7 +381,7 @@ class _LanguagePageState extends State<LanguagePage> {
                                 quizl = EnglishTutGreetings;
                                 break;
                               case 'Spanish':
-                                quizl = HindiTutNumber;
+                                quizl = SpanishTutGreetings;
                                 break;
                               case 'German':
                                 quizl = HindiTutNumber;
@@ -346,7 +392,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Module 4: Greetings', 'quizNo': 'Tutorial4', 'score': profile['languages'][langName]['beginner']['Tutorial4'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Module 4: Greetings',
+                              'quizNo': 'Tutorial4',
+                              'score': profile['languages'][langName]['beginner']['Tutorial4'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -358,7 +411,8 @@ class _LanguagePageState extends State<LanguagePage> {
                               ],
                             ),
                           ),
-                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial4'].toString().toString(), style: k20TextStyle), //TODO:ADD score
+                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial4'].toString().toString(),
+                              style: k20TextStyle), //TODO:ADD score
                         ),
                         ListTile(
                           onTap: () {
@@ -371,7 +425,7 @@ class _LanguagePageState extends State<LanguagePage> {
                                 quizl = EnglishQuizGreetings;
                                 break;
                               case 'Spanish':
-                                quizl = HindiQuizAnimals;
+                                quizl = SpanishQuizGreetings;
                                 break;
                               case 'German':
                                 quizl = HindiQuizAnimals;
@@ -382,7 +436,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 4: Greetings', 'quizNo': 'Quiz4', 'score': profile['languages'][langName]['beginner']['Quiz4'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 4: Greetings',
+                              'quizNo': 'Quiz4',
+                              'score': profile['languages'][langName]['beginner']['Quiz4'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -409,7 +470,7 @@ class _LanguagePageState extends State<LanguagePage> {
                                 quizl = EnglishTutFamily;
                                 break;
                               case 'Spanish':
-                                quizl = HindiTutNumber;
+                                quizl = SpanishTutFamily;
                                 break;
                               case 'German':
                                 quizl = HindiTutNumber;
@@ -420,7 +481,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Module 5: Family', 'quizNo': 'Tutorial5', 'score': profile['languages'][langName]['beginner']['Tutorial5'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Module 5: Family',
+                              'quizNo': 'Tutorial5',
+                              'score': profile['languages'][langName]['beginner']['Tutorial5'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -432,7 +500,8 @@ class _LanguagePageState extends State<LanguagePage> {
                               ],
                             ),
                           ),
-                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial5'].toString().toString(), style: k20TextStyle), //TODO:ADD score
+                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial5'].toString().toString(),
+                              style: k20TextStyle), //TODO:ADD score
                         ),
                         ListTile(
                           onTap: () {
@@ -445,7 +514,7 @@ class _LanguagePageState extends State<LanguagePage> {
                                 quizl = EnglishQuizFamily;
                                 break;
                               case 'Spanish':
-                                quizl = HindiQuizAnimals;
+                                quizl = SpanishQuizFamily;
                                 break;
                               case 'German':
                                 quizl = HindiQuizAnimals;
@@ -456,7 +525,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 5: Family Tree', 'quizNo': 'Quiz5', 'score': profile['languages'][langName]['beginner']['Quiz5'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 5: Family Tree',
+                              'quizNo': 'Quiz5',
+                              'score': profile['languages'][langName]['beginner']['Quiz5'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -475,6 +551,7 @@ class _LanguagePageState extends State<LanguagePage> {
                     SizedBox(
                       height: 2.h,
                     ),
+                    // intermediate
                     ExpansionTile(
                       iconColor: Colors.white,
                       collapsedIconColor: Colors.white,
@@ -530,7 +607,8 @@ class _LanguagePageState extends State<LanguagePage> {
                               ],
                             ),
                           ),
-                          trailing: Text(profile['languages'][langName]['intermediate']['Tutorial1'].toString(), style: k20TextStyle), // TODO: ADD score
+                          trailing:
+                              Text(profile['languages'][langName]['intermediate']['Tutorial1'].toString(), style: k20TextStyle), // TODO: ADD score
                         ),
                         ListTile(
                           onTap: () {
@@ -554,7 +632,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 1: Numbers', 'quizNo': 'Quiz1', 'score': profile['languages'][langName]['intermediate']['Quiz1'], 'level': 'intermediate', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 1: Numbers',
+                              'quizNo': 'Quiz1',
+                              'score': profile['languages'][langName]['intermediate']['Quiz1'],
+                              'level': 'intermediate',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -611,7 +696,8 @@ class _LanguagePageState extends State<LanguagePage> {
                               ],
                             ),
                           ),
-                          trailing: Text(profile['languages'][langName]['intermediate']['Tutorial2'].toString().toString(), style: k20TextStyle), //TODO:ADD score
+                          trailing: Text(profile['languages'][langName]['intermediate']['Tutorial2'].toString().toString(),
+                              style: k20TextStyle), //TODO:ADD score
                         ),
                         ListTile(
                           onTap: () {
@@ -635,7 +721,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 2: Animals', 'quizNo': 'Quiz2', 'score': profile['languages'][langName]['beginner']['Quiz2'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 2: Animals',
+                              'quizNo': 'Quiz2',
+                              'score': profile['languages'][langName]['beginner']['Quiz2'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -673,7 +766,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Module 3: Colors', 'quizNo': 'Tutorial3', 'score': profile['languages'][langName]['beginner']['Tutorial3'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Module 3: Colors',
+                              'quizNo': 'Tutorial3',
+                              'score': profile['languages'][langName]['beginner']['Tutorial3'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -685,7 +785,8 @@ class _LanguagePageState extends State<LanguagePage> {
                               ],
                             ),
                           ),
-                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial3'].toString().toString(), style: k20TextStyle), //TODO:ADD score
+                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial3'].toString().toString(),
+                              style: k20TextStyle), //TODO:ADD score
                         ),
                         ListTile(
                           onTap: () {
@@ -709,7 +810,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 3: Colors', 'quizNo': 'Quiz3', 'score': profile['languages'][langName]['beginner']['Quiz3'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 3: Colors',
+                              'quizNo': 'Quiz3',
+                              'score': profile['languages'][langName]['beginner']['Quiz3'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -747,7 +855,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Module 4: Greetings', 'quizNo': 'Tutorial4', 'score': profile['languages'][langName]['beginner']['Tutorial4'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Module 4: Greetings',
+                              'quizNo': 'Tutorial4',
+                              'score': profile['languages'][langName]['beginner']['Tutorial4'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -759,7 +874,8 @@ class _LanguagePageState extends State<LanguagePage> {
                               ],
                             ),
                           ),
-                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial4'].toString().toString(), style: k20TextStyle), //TODO:ADD score
+                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial4'].toString().toString(),
+                              style: k20TextStyle), //TODO:ADD score
                         ),
                         ListTile(
                           onTap: () {
@@ -783,7 +899,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 4: Greetings', 'quizNo': 'Quiz4', 'score': profile['languages'][langName]['beginner']['Quiz4'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 4: Greetings',
+                              'quizNo': 'Quiz4',
+                              'score': profile['languages'][langName]['beginner']['Quiz4'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -821,7 +944,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Module 5: Family', 'quizNo': 'Tutorial5', 'score': profile['languages'][langName]['beginner']['Tutorial5'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Module 5: Family',
+                              'quizNo': 'Tutorial5',
+                              'score': profile['languages'][langName]['beginner']['Tutorial5'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -833,7 +963,8 @@ class _LanguagePageState extends State<LanguagePage> {
                               ],
                             ),
                           ),
-                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial5'].toString().toString(), style: k20TextStyle), //TODO:ADD score
+                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial5'].toString().toString(),
+                              style: k20TextStyle), //TODO:ADD score
                         ),
                         ListTile(
                           onTap: () {
@@ -857,7 +988,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 5: Family Tree', 'quizNo': 'Quiz5', 'score': profile['languages'][langName]['beginner']['Quiz5'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 5: Family Tree',
+                              'quizNo': 'Quiz5',
+                              'score': profile['languages'][langName]['beginner']['Quiz5'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -876,6 +1014,7 @@ class _LanguagePageState extends State<LanguagePage> {
                     SizedBox(
                       height: 2.h,
                     ),
+                    // advance
                     ExpansionTile(
                       iconColor: Colors.white,
                       collapsedIconColor: Colors.white,
@@ -912,7 +1051,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Module 1: Numbers', 'quizNo': 'Tutorial1', 'score': profile['languages'][langName]['advance']['Tutorial1'], 'level': 'advance', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Module 1: Numbers',
+                              'quizNo': 'Tutorial1',
+                              'score': profile['languages'][langName]['advance']['Tutorial1'],
+                              'level': 'advance',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -948,7 +1094,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 1: Numbers', 'quizNo': 'Quiz1', 'score': profile['languages'][langName]['advance']['Quiz1'], 'level': 'advance', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 1: Numbers',
+                              'quizNo': 'Quiz1',
+                              'score': profile['languages'][langName]['advance']['Quiz1'],
+                              'level': 'advance',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -986,7 +1139,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Module 2: Animals', 'quizNo': 'Tutorial2', 'score': profile['languages'][langName]['advance']['Tutorial2'], 'level': 'advance', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Module 2: Animals',
+                              'quizNo': 'Tutorial2',
+                              'score': profile['languages'][langName]['advance']['Tutorial2'],
+                              'level': 'advance',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -998,7 +1158,8 @@ class _LanguagePageState extends State<LanguagePage> {
                               ],
                             ),
                           ),
-                          trailing: Text(profile['languages'][langName]['advance']['Tutorial2'].toString().toString(), style: k20TextStyle), //TODO:ADD score
+                          trailing: Text(profile['languages'][langName]['advance']['Tutorial2'].toString().toString(),
+                              style: k20TextStyle), //TODO:ADD score
                         ),
                         ListTile(
                           onTap: () {
@@ -1022,7 +1183,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 2: Animals', 'quizNo': 'Quiz2', 'score': profile['languages'][langName]['advance']['Quiz2'], 'level': 'advance', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 2: Animals',
+                              'quizNo': 'Quiz2',
+                              'score': profile['languages'][langName]['advance']['Quiz2'],
+                              'level': 'advance',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -1060,7 +1228,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Module 3: Colors', 'quizNo': 'Tutorial3', 'score': profile['languages'][langName]['advance']['Tutorial3'], 'level': 'advance', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Module 3: Colors',
+                              'quizNo': 'Tutorial3',
+                              'score': profile['languages'][langName]['advance']['Tutorial3'],
+                              'level': 'advance',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -1072,7 +1247,8 @@ class _LanguagePageState extends State<LanguagePage> {
                               ],
                             ),
                           ),
-                          trailing: Text(profile['languages'][langName]['advance']['Tutorial3'].toString().toString(), style: k20TextStyle), //TODO:ADD score
+                          trailing: Text(profile['languages'][langName]['advance']['Tutorial3'].toString().toString(),
+                              style: k20TextStyle), //TODO:ADD score
                         ),
                         ListTile(
                           onTap: () {
@@ -1096,7 +1272,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 3: Colors', 'quizNo': 'Quiz3', 'score': profile['languages'][langName]['advance']['Quiz3'], 'level': 'advance', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 3: Colors',
+                              'quizNo': 'Quiz3',
+                              'score': profile['languages'][langName]['advance']['Quiz3'],
+                              'level': 'advance',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -1134,7 +1317,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Module 4: Greetings', 'quizNo': 'Tutorial4', 'score': profile['languages'][langName]['advance']['Tutorial4'], 'level': 'advance', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Module 4: Greetings',
+                              'quizNo': 'Tutorial4',
+                              'score': profile['languages'][langName]['advance']['Tutorial4'],
+                              'level': 'advance',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -1146,7 +1336,8 @@ class _LanguagePageState extends State<LanguagePage> {
                               ],
                             ),
                           ),
-                          trailing: Text(profile['languages'][langName]['advance']['Tutorial4'].toString().toString(), style: k20TextStyle), //TODO:ADD score
+                          trailing: Text(profile['languages'][langName]['advance']['Tutorial4'].toString().toString(),
+                              style: k20TextStyle), //TODO:ADD score
                         ),
                         ListTile(
                           onTap: () {
@@ -1170,7 +1361,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 4: Greetings', 'quizNo': 'Quiz4', 'score': profile['languages'][langName]['advance']['Quiz4'], 'level': 'advance', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 4: Greetings',
+                              'quizNo': 'Quiz4',
+                              'score': profile['languages'][langName]['advance']['Quiz4'],
+                              'level': 'advance',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -1208,7 +1406,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Module 5: Family', 'quizNo': 'Tutorial5', 'score': profile['languages'][langName]['beginner']['Tutorial5'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Module 5: Family',
+                              'quizNo': 'Tutorial5',
+                              'score': profile['languages'][langName]['beginner']['Tutorial5'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(
@@ -1220,7 +1425,8 @@ class _LanguagePageState extends State<LanguagePage> {
                               ],
                             ),
                           ),
-                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial5'].toString().toString(), style: k20TextStyle), //TODO:ADD score
+                          trailing: Text(profile['languages'][langName]['beginner']['Tutorial5'].toString().toString(),
+                              style: k20TextStyle), //TODO:ADD score
                         ),
                         ListTile(
                           onTap: () {
@@ -1244,7 +1450,14 @@ class _LanguagePageState extends State<LanguagePage> {
                               default:
                                 break;
                             }
-                            final Map<String, dynamic> quiz = {'quizList': quizl, 'quizName': 'Quiz 5: Family Tree', 'quizNo': 'Quiz5', 'score': profile['languages'][langName]['beginner']['Quiz5'], 'level': 'beginner', 'langName': langName};
+                            final Map<String, dynamic> quiz = {
+                              'quizList': quizl,
+                              'quizName': 'Quiz 5: Family Tree',
+                              'quizNo': 'Quiz5',
+                              'score': profile['languages'][langName]['beginner']['Quiz5'],
+                              'level': 'beginner',
+                              'langName': langName
+                            };
                             Navigator.pushReplacementNamed(context, QuizHandler.routeName, arguments: quiz);
                           },
                           title: RichText(

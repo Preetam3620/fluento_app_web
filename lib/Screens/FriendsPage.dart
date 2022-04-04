@@ -88,7 +88,7 @@ class _FriendsPageState extends State<FriendsPage> {
           print('FloatingActionButton pressed ...');
           Navigator.pushNamed(context, addFriendsCard.routeName);
         },
-        heroTag: 'frndtag',
+        heroTag: 'addFriend',
         backgroundColor: Color(0xFF6C63FF),
         label: Row(
           mainAxisSize: MainAxisSize.max,
